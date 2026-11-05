@@ -19,3 +19,4 @@
 | Quitter (0) | Fermeture du registre, retour au prompt | OK | Moi |
 | Modifier O11 culture → sorgho | Opération modifiée avec succès | OK | Tidiane Cheick |
 | Lister (12 opérations) | O01…O11 + DO12 affichés | OK | Tidiane Cheick |
+| Recherche culture tomate | 3 opérations (O01,O06,O09) | OK | SENE Rodrigue
