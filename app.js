@@ -18,7 +18,6 @@ async function afficherAccueil (operations) {
   console.log(`${operations.length} opération(s) chargée(s) depuis ${FICHIER_DONNEES}.`);
   console.log('');
 }
-
 function afficherMenu() {
   console.log('----------------- MENU PRINCIPAL -----------------');
   console.log('1. Ajouter une opération');
