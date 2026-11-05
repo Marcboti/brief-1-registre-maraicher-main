@@ -10,7 +10,6 @@ import { coutMinMax, syntheseParParcelle, totalCouts } from './src/synthese.js';
 import { modifierOperation, parcelleLaPlusCouteuse, supprimerOperation, trierParCoutDecroissant } from './src/bonus.js';
 
 const FICHIER_DONNEES = 'donnees/operations.json';
-
 async function afficherAccueil (operations) {
   console.log ('=================================================');
   console.log('   REGISTRE DES OPÉRATIONS MARAÎCHÈRES');
