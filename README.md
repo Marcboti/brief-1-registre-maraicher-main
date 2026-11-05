@@ -46,7 +46,7 @@ app.js (menu)
 
 ## Données
 
-Fichier : `donnees/operations.json`. 10 opérations (O01 à O10). Données fictives.
+Fichier : `donnees/operations.json`
 
 | Champ | Signification | Exemple |
 |---|---|---|
@@ -68,8 +68,7 @@ Fichier : `donnees/operations.json`. 10 opérations (O01 à O10). Données ficti
 
 ## Documents
 
-[Dictionnaire des données](docs/dictionnaire-donnees.md) · [Tâches](docs/taches.md) · [Relevé des tests](docs/releve-tests.md) · [Journal de recherche](docs/journal-recherche.md) · [Fiche agronomique](docs/fiche-agronomique.md) · [Fiche individuelle](docs/fiche-individuelle.md)
-
+[Dictionnaire des données](docs/dictionnaire-donnees.md) · [Tâches](docs/taches.md) · [Relevé des tests](docs/releve-tests.md) · [Journal de recherche](docs/journal-recherche.md) · [Fiche agronomique](docs/fiche-agronomique.md) · [Fiche individuelle](docs/fiche-individuelle.md) · [Présentation](presentation.html) [Presentation (presentation.html)]
 ## Auteur
 
 Prénom et nom : Bi Boti Jules Marc ZAMBLE | Compte GitHub : https://github.com/Marcboti.
