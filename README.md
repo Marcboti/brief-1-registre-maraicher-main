@@ -68,7 +68,7 @@ Fichier : `donnees/operations.json`
 
 ## Documents
 
-[Dictionnaire des données](docs/dictionnaire-donnees.md) · [Tâches](docs/taches.md) · [Relevé des tests](docs/releve-tests.md) · [Journal de recherche](docs/journal-recherche.md) · [Fiche agronomique](docs/fiche-agronomique.md) · [Fiche individuelle](docs/fiche-individuelle.md) · [Présentation](presentation.html) [Presentation (presentation.html)]
+[Dictionnaire des données](docs/dictionnaire-donnees.md) · [Tâches](docs/taches.md) · [Relevé des tests](docs/releve-tests.md) · [Journal de recherche](docs/journal-recherche.md) · [Fiche agronomique](docs/fiche-agronomique.md) · [Fiche individuelle](docs/fiche-individuelle.md) · [Présentation pour la soutenance](presentation.html)
 ## Auteur
 
 Prénom et nom : Bi Boti Jules Marc ZAMBLE | Compte GitHub : https://github.com/Marcboti.
