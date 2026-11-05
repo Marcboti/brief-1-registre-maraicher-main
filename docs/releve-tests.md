@@ -17,5 +17,6 @@
 | Modifier O011 culture → gombo | Opération modifiée avec succès | OK | Moi |
 | Tri par coût décroissant | O06 (8000) en premier | OK | Moi |
 | Quitter (0) | Fermeture du registre, retour au prompt | OK | Moi |
-| Modifier O11 culture → sorgho | Opération modifiée avec succès | OK | Tidiane Cheick |
-| Lister (12 opérations) | O01…O11 + DO12 affichés | OK | Tidiane Cheick |
+| Modifier O11 culture → sorgho | Opération modifiée avec succès | OK | Tidiane Cheick SOUMAHORO|
+| Lister (12 opérations) | O01…O11 + DO12 affichés | OK | Tidiane Cheick SOUMAHORO|
+| Recherche culture tomate | 3 opérations (O01,O06,O09) | OK | SENE Rodrigue
