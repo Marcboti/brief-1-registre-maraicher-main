@@ -6,7 +6,7 @@ import { trouverParId, verifierOperation } from './registre.js';
 import { syntheseParParcelle } from './synthese.js';
 
 // Les champs qu'on a le droit de modifier. L'identifiant n'en fait pas partie.
-export const CHAMPS_MODIFIABLES = ['date', 'parcelle', 'culture', 'operation', 'coutFCFA'];
+export const CHAMPS_MODIFIABLES = ['date', 'parcelle', 'culture', 'operation', 'coutFCFA', 'recettesFCFA'];
 
 // Supprime du registre l'opération qui a cet identifiant.
 // Renvoie l'opération supprimée, ou undefined si elle n'existe pas (le registre ne change pas).
@@ -44,7 +44,7 @@ export function modifierOperation(operations, id, champ, valeur) {
     return erreurs;
   }
 
-  if (champ === 'coutFCFA') {
+  if (champ === 'coutFCFA' || champ === 'recettesFCFA') {
     operation[champ] = versNombre (valeur);
   } else {
     operation[champ] = valeur;
