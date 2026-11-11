@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registre Maraîcher - Gestion des opérations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-icon">🌱</span>
+      <span>Registre Maraîcher</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="btn-refresh" title="Actualiser">↻</button>
+    </div>
+  </nav>
+
+  <!-- Header avec synthèse rapide -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Registre des Opérations Maraîchères</h1>
+      <p>Suivez vos opérations culturales, vos dépenses et vos recettes en temps réel.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-nombre">0</div>
+        <div class="stat-label">Opérations</div>
+      </div>
+      <div class="stat-card stat-costs">
+        <div class="stat-value" id="stat-couts">0</div>
+        <div class="stat-label">Coûts (FCFA)</div>
+      </div>
+      <div class="stat-card stat-revenue">
+        <div class="stat-value" id="stat-recettes">0</div>
+        <div class="stat-label">Recettes (FCFA)</div>
+      </div>
+      <div class="stat-card stat-profit">
+        <div class="stat-value" id="stat-benefice">0</div>
+        <div class="stat-label">Bénéfice (FCFA)</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Formulaire d'ajout -->
+    <section class="card">
+      <h2 class="section-title">➕ Ajouter une opération</h2>
+      <form id="form-ajouter" class="form-grid">
+        <div class="form-group">
+          <label>Identifiant <span class="req">*</span></label>
+          <input type="text" id="input-id" placeholder="Ex. O01" required pattern="O\d+">
+        </div>
+        <div class="form-group">
+          <label>Date <span class="req">*</span></label>
+          <input type="date" id="input-date" required>
+        </div>
+        <div class="form-group">
+          <label>Parcelle <span class="req">*</span></label>
+          <input type="text" id="input-parcelle" placeholder="Ex. P1" required>
+        </div>
+        <div class="form-group">
+          <label>Culture <span class="req">*</span></label>
+          <input type="text" id="input-culture" placeholder="Ex. tomate" required>
+        </div>
+        <div class="form-group">
+          <label>Opération <span class="req">*</span></label>
+          <select id="input-operation" required>
+            <option value="">Choisir...</option>
+            <option>semis</option>
+            <option>arrosage</option>
+            <option>désherbage</option>
+            <option>repiquage</option>
+            <option>récolte</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Coût (FCFA) <span class="req">*</span></label>
+          <input type="text" id="input-cout" placeholder="0" required>
+        </div>
+        <div class="form-group">
+          <label>Recettes (FCFA)</label>
+          <input type="text" id="input-recettes" placeholder="0">
+        </div>
+        <div class="form-group full-width">
+          <button type="submit" class="btn btn-primary" id="btn-ajouter">Ajouter l'opération</button>
+        </div>
+        <div id="form-message" class="form-message"></div>
+      </form>
+    </section>
+
+    <!-- Liste des opérations -->
+    <section class="card">
+      <div class="section-header">
+        <h2 class="section-title">📋 Liste des opérations</h2>
+        <div class="list-controls">
+          <input type="text" id="input-recherche" placeholder="Rechercher (id, parcelle, culture...)">
+          <select id="filter-parcelle">
+            <option value="">Toutes parcelles</option>
+          </select>
+          <select id="filter-culture">
+            <option value="">Toutes cultures</option>
+          </select>
+          <select id="sort-tri">
+            <option value="date">Trier par date</option>
+            <option value="cout">Coût croissant</option>
+            <option value="cout-desc">Coût décroissant</option>
+          </select>
+        </div>
+      </div>
+      <div id="liste-operations" class="operations-list">
+        <!-- Les opérations s'affichent ici -->
+      </div>
+      <div id="liste-vide" class="empty-state" style="display:none;">
+        <p>Aucune opération trouvée.</p>
+      </div>
+    </section>
+
+    <!-- Synthèse détaillée -->
+    <section class="card">
+      <h2 class="section-title">📊 Synthèse et rentabilité</h2>
+      <div class="synthese-grid">
+        <div class="synthese-card">
+          <h3>Par parcelle</h3>
+          <div id="synthese-parcelle" class="synthese-content">
+            <!-- Contenu généré par JS -->
+          </div>
+        </div>
+        <div class="synthese-card">
+          <h3>Détails</h3>
+          <div id="synthese-details" class="synthese-content">
+            <!-- Contenu généré par JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sauvegarde / Export / Import -->
+    <section class="card">
+      <h2 class="section-title">💾 Sauvegarde et export</h2>
+      <div class="action-grid">
+        <button class="btn btn-secondary" id="btn-sauvegarder">Sauvegarder (JSON)</button>
+        <button class="btn btn-secondary" id="btn-exporter-csv">Exporter CSV</button>
+        <button class="btn btn-outline" id="btn-lister-sauvegardes">Voir les sauvegardes</button>
+      </div>
+      <div class="import-export" id="import-export-section" style="margin-top:1rem; display:none; padding:1rem; background:#f8fafc; border-radius:8px;">
+        <h4>Importer depuis un fichier JSON</h4>
+        <input type="text" id="input-import-chemin" placeholder="Chemin du fichier..." style="padding:0.5rem; margin-right:0.5rem;">
+        <button class="btn btn-primary" id="btn-importer">Importer</button>
+      </div>
+      <div id="sauvegardes-liste" style="margin-top:1rem;"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

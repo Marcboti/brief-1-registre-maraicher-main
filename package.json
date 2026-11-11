@@ -13,5 +13,24 @@
     "test:stockage": "node --test test/stockage.test.js",
     "test:bonus": "node --test test/bonus.test.js",
     "test:outils": "node --test test/outils.test.js"
+  },
+  "main": "app.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcboti/brief-1-registre-maraicher-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcboti/brief-1-registre-maraicher-main/issues"
+  },
+  "homepage": "https://github.com/Marcboti/brief-1-registre-maraicher-main#readme",
+  "dependencies": {
+    "express": "^5.3.0"
   }
 }
